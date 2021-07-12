@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple JS App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    .table td, .table th {
+      vertical-align: baseline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <button style="margin: 2rem 0;" type="button" class="btn btn-primary" onclick="reload()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+      <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+    </svg>
+  </button>
+    
+    <div style="margin-bottom: 2rem;">
+      <h3>Add Person</h2>
+      <div class="row">
+      <div class="col">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstName" aria-describedby="emailHelp">
+        </div>
+        <div class="col">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastName">
+        </div>
+        <div class="col">
+          <label for="age" class="form-label">Age</label>
+          <input type="text" class="form-control" id="age">
+        </div>
+        <div class="col" style="display: flex; align-items: flex-end;">
+          <div>
+            <button type="button" class="btn btn-success" onclick="addPerson()">Add Person</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Persons</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Age</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="persons-table-body">
+      </tbody>
+    </table>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
